@@ -28,12 +28,14 @@
         </ul>
       </header>
       <section>
-        <h1>
-<a id="eco---a-php-framework" class="anchor" href="#eco---a-php-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Eco - A PHP Framework</h1>
+        <h2>
+<a id="eco---a-php-framework" class="anchor" href="#eco---a-php-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Eco - A PHP Framework</h2>
 
 <p>Eco is a light, ready to use, <a href="https://php.net">PHP</a> Framework. It has the core things you'll need to start developing your <em>Server Side Web App</em>.</p>
 
 <p>With a low need of configuration is close to a <em>just upload and develop</em> framework.</p>
+
+<hr>
 
 <h2>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
@@ -41,9 +43,36 @@
 <p>What are the requirements of Eco? The requirements of this PHP Framework are really simple:</p>
 
 <ul>
-<li>PHP Versión: 5.3+. Lower versions may encounter deprecated functionality problems.</li>
+<li>PHP Versión: 5.3+.</li>
 <li>Apache's Mod_Rewrite module activated.</li>
 </ul>
+
+<hr>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Eco is configure-friendly so there's just a few things you need to change to get ready and put your hands on developing your app.</p>
+
+<h3>
+<a id="configuring-the-app-routes" class="anchor" href="#configuring-the-app-routes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuring the App Routes</h3>
+
+<p>To start configuring your own <em>App Routes</em> you just need to access the following library: <code>lib.Router.php</code> and in the <em>Method</em> called <code>AppRoutes()</code> you'll find the following <code>Array</code>:</p>
+
+<pre><code>$this-&gt;ColeccionRutas = [
+    'index' =&gt; [ 'argumentos' =&gt; [ 'titulo' =&gt; 'EcoFramework DashBoard' ] ],
+];
+</code></pre>
+
+<p>Let's say you want to create a route for a view that will be used for your users profile. We can handle it this way:</p>
+
+<pre><code>$this-&gt;ColeccionRutas = [
+    'index' =&gt; [ 'argumentos' =&gt; [ 'titulo' =&gt; 'EcoFramework DashBoard' ] ],
+    'user' =&gt; [ 'argumentos' =&gt; [ 'titulo' =&gt; 'User Profile' ] ]
+];
+</code></pre>
+
+<p>And that's all folks, your route is now ready to be used but there's a last thing to prepare because the route is defined but... Which view will it take? At this moment: none. We need to head to <code>Views</code> folder and create a <em>View</em> called <code>view.user.php</code> and fill it with your <code>HTML</code> and <code>PHP</code>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/Ramnza">Ramnza</a></p>
