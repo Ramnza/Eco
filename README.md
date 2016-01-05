@@ -1,3 +1,5 @@
+![Eco Framework Logo](http://eco.elitenetwork.es/public/images/logotypes/EcoGitHubLogo256.png)
+
 ## Eco - A PHP Framework
 
 Eco is a light, ready to use, [PHP](https://php.net) Framework. It has the core things you'll need to start developing your *Server Side Web App*.
