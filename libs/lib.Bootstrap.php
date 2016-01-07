@@ -12,7 +12,7 @@ class Bootstrap
 		$sesion = new Sesion('usuario');
 		$router = new Router();
 		$router->AppRoutes();
-		$router->View();
+		$router->View($sesion);
 	}
 
 }
